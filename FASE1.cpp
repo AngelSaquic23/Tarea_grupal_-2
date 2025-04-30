@@ -98,27 +98,39 @@ void leerDiccionario() {
              << " | Funcionalidad: " << it->second.funcionalidad << endl;
     }
 }
-// Actualizar palabra
-void actualizarPalabra() {
-    string palabra;
-    cout << "Ingrese la palabra a actualizar: ";
-    getline(cin, palabra);
+// Menu principal
+void menu() {
+    cargarDiccionario();
+    while (true) {
+        cout << "\n--- Menu ---\n";
+        cout << "1. Crear palabra\n";
+        cout << "2. Leer diccionario\n";
+        cout << "3. Actualizar palabra\n";
+        cout << "4. Borrar palabra\n";
+        cout << "5. Salir\n";
+        cout << "Seleccione una opcion: ";
 
-    if (diccionario.find(palabra) == diccionario.end()) {
-        cout << "La palabra no existe.\n";
-        return;
+        string opcion;
+        getline(cin, opcion);
+
+        if (opcion == "1") {
+            crearPalabra();
+        } else if (opcion == "2") {
+            leerDiccionario();
+        } else if (opcion == "3") {
+            actualizarPalabra();
+        } else if (opcion == "4") {
+            borrarPalabra();
+        } else if (opcion == "5") {
+            cout << "Saliendo...\n";
+            break;
+        } else {
+            cout << "Opcion invalida.\n";
+        }
     }
+}
 
-    string nuevaTraduccion, nuevaFuncionalidad;
-    cout << "Ingrese nueva Traduccion: ";
-    getline(cin, nuevaTraduccion);
-    cout << "Ingrese nueva Funcionalidad: ";
-    getline(cin, nuevaFuncionalidad);
-
-    Palabra p;
-    p.traduccion = nuevaTraduccion;
-    p.funcionalidad = nuevaFuncionalidad;
-    diccionario[palabra] = p;
-    guardarDiccionario();
-    cout << "Palabra actualizada exitosamente.\n";
+int main() {
+    menu();
+    return 0;
 }
