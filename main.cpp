@@ -16,3 +16,5 @@ int main() {
 void menuFase1() {
     int op;
     do {
+cout << "Seleccione una opcion: ";
+    	  cin >> op;
