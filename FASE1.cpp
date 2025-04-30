@@ -98,3 +98,27 @@ void leerDiccionario() {
              << " | Funcionalidad: " << it->second.funcionalidad << endl;
     }
 }
+// Actualizar palabra
+void actualizarPalabra() {
+    string palabra;
+    cout << "Ingrese la palabra a actualizar: ";
+    getline(cin, palabra);
+
+    if (diccionario.find(palabra) == diccionario.end()) {
+        cout << "La palabra no existe.\n";
+        return;
+    }
+
+    string nuevaTraduccion, nuevaFuncionalidad;
+    cout << "Ingrese nueva Traduccion: ";
+    getline(cin, nuevaTraduccion);
+    cout << "Ingrese nueva Funcionalidad: ";
+    getline(cin, nuevaFuncionalidad);
+
+    Palabra p;
+    p.traduccion = nuevaTraduccion;
+    p.funcionalidad = nuevaFuncionalidad;
+    diccionario[palabra] = p;
+    guardarDiccionario();
+    cout << "Palabra actualizada exitosamente.\n";
+}
