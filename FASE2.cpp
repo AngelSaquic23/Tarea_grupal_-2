@@ -127,3 +127,8 @@ string procesarCodigo(string codigo) {
 
     return salida;
 }
+   cout << "\n--- Codigo Traducido ---\n";
+    cout << procesarCodigo(codigo);
+
+    return 0;
+}
