@@ -98,6 +98,19 @@ void leerDiccionario() {
              << " | Funcionalidad: " << it->second.funcionalidad << endl;
     }
 }
+// Borrar palabra
+void borrarPalabra() {
+    string palabra;
+    cout << "Ingrese la palabra a borrar: ";
+    getline(cin, palabra);
+
+    if (diccionario.erase(palabra)) {
+        guardarDiccionario();
+        cout << "Palabra borrada exitosamente.\n";
+    } else {
+        cout << "La palabra no existe.\n";
+    }
+}
 // Menu principal
 void menu() {
     cargarDiccionario();
