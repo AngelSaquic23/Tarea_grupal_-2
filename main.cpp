@@ -28,17 +28,22 @@ int main() {
 
     return 0;
 }
-
-
 void menuFase1() {
     int op;
     do {
- switch(op) {
+    	system("cls");
+    	cout << "1. Iniciar Programa\n";
+    	cout << "0. Regresar\n";
+        cout << "Seleccione una opcion: ";
+    	  cin >> op;
+
+        switch(op) {
             case 1: system("start FASE1.exe"); break;
- }
+            case 0: break;
+            default: cout << "Opcion invalida.\n"; system("pause"); break;
+        }
 
     } while(op != 0);
-}
 }
 
 void menuFase2() {
@@ -49,14 +54,12 @@ void menuFase2() {
     	cout << "0. Regresar\n";
         cout << "Seleccione una opcion: ";
     	  cin >> op;
-int main() {
-    int opcion;
 
-    do {
-        system("cls");
-        cout << "===== MENU PRINCIPAL =====\n";
-        cout << "1. Fase 1\n";
-        cout << "2. Fase 2\n";
-        cout << "0. Salir\n";
-        cout << "Seleccione una opcion: ";
-        cin >> opcion;
+        switch(op) {
+            case 1: system("start FASE2.exe"); break;
+            case 0: break;
+            default: cout << "Opcion invalida.\n"; system("pause"); break;
+        }
+
+    } while(op != 0);
+}
