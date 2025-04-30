@@ -11,3 +11,6 @@ int main() {
     do {
         system("cls");             
 
+void menuFase1() {
+    int op;
+    do {
