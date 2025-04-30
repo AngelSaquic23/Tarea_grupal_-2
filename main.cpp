@@ -49,11 +49,14 @@ void menuFase2() {
     	cout << "0. Regresar\n";
         cout << "Seleccione una opcion: ";
     	  cin >> op;
-    switch(op) {
-            case 1: system("start FASE2.exe"); break;
-            case 0: break;
-            default: cout << "Opcion invalida.\n"; system("pause"); break;
-        }
+int main() {
+    int opcion;
 
-    } while(op != 0);
-}
+    do {
+        system("cls");
+        cout << "===== MENU PRINCIPAL =====\n";
+        cout << "1. Fase 1\n";
+        cout << "2. Fase 2\n";
+        cout << "0. Salir\n";
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
