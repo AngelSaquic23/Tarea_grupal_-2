@@ -91,3 +91,10 @@ void crearPalabra() {
     guardarDiccionario();
     cout << "Palabra agregada exitosamente.\n";
 }
+// Leer todas las palabras
+void leerDiccionario() {
+    for (map<string, Palabra>::iterator it = diccionario.begin(); it != diccionario.end(); ++it) {
+        cout << it->first << " -> Traduccion: " << it->second.traduccion
+             << " | Funcionalidad: " << it->second.funcionalidad << endl;
+    }
+}
