@@ -1,5 +1,9 @@
-
 #include <iostream>
-#include <fstream>
-#include <sstream>
-#include <string>
+#include <cstdlib>
+using namespace std;
+
+void menuFase1();
+void menuFase2();
+
+             
+

@@ -2,7 +2,6 @@
 #include <fstream>
 #include <string>
 #include <map>
-
 using namespace std;
 
 struct Palabra {
@@ -172,5 +171,5 @@ void menu() {
 
 int main() {
     menu();
-    return 0;
+    system("pause");
 }

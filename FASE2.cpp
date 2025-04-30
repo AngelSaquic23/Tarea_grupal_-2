@@ -5,7 +5,7 @@
 #include <map>
 #include <vector>
 using namespace std;
-
+    
 map<string, pair<string, string> > diccionario;
 
 // Cargar diccionario desde diccionario.dat
@@ -24,7 +24,7 @@ void cargarDiccionario(const string& nombreArchivo) {
     }
 
     archivo.close();
-}
+	}
 
 // Traducir palabra y devolver funcionalidad si existe
 string traducirPalabra(const string& palabraOriginal, string& funcionalidadUsada) {
@@ -128,6 +128,5 @@ int main() {
 
     cout << "\n--- Codigo Traducido ---\n";
     cout << procesarCodigo(codigo);
-
-    return 0;
+   system("pause");
 }
