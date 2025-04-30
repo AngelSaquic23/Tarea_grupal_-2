@@ -13,6 +13,11 @@ int main() {
   cout << "===== MENU PRINCIPAL =====\n";
         cout << "1. Fase 1\n";
 
+cout << "2. Fase 2\n";
+        cout << "0. Salir\n";
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
+
 void menuFase1() {
     int op;
     do {
