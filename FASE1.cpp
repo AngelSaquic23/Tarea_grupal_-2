@@ -23,7 +23,6 @@ string palabrasBase[] = {
     "typename", "union", "unsigned", "using", "virtual", "void", "volatile", "while"
 };
 
-
 // Funcion para cargar el archivo en memoria
 void cargarDiccionario() {
     ifstream archivo(archivoNombre.c_str());
@@ -91,6 +90,7 @@ void crearPalabra() {
     guardarDiccionario();
     cout << "Palabra agregada exitosamente.\n";
 }
+
 // Leer todas las palabras
 void leerDiccionario() {
     for (map<string, Palabra>::iterator it = diccionario.begin(); it != diccionario.end(); ++it) {
@@ -98,6 +98,32 @@ void leerDiccionario() {
              << " | Funcionalidad: " << it->second.funcionalidad << endl;
     }
 }
+
+// Actualizar palabra
+void actualizarPalabra() {
+    string palabra;
+    cout << "Ingrese la palabra a actualizar: ";
+    getline(cin, palabra);
+
+    if (diccionario.find(palabra) == diccionario.end()) {
+        cout << "La palabra no existe.\n";
+        return;
+    }
+
+    string nuevaTraduccion, nuevaFuncionalidad;
+    cout << "Ingrese nueva Traduccion: ";
+    getline(cin, nuevaTraduccion);
+    cout << "Ingrese nueva Funcionalidad: ";
+    getline(cin, nuevaFuncionalidad);
+
+    Palabra p;
+    p.traduccion = nuevaTraduccion;
+    p.funcionalidad = nuevaFuncionalidad;
+    diccionario[palabra] = p;
+    guardarDiccionario();
+    cout << "Palabra actualizada exitosamente.\n";
+}
+
 // Borrar palabra
 void borrarPalabra() {
     string palabra;
@@ -111,6 +137,7 @@ void borrarPalabra() {
         cout << "La palabra no existe.\n";
     }
 }
+
 // Menu principal
 void menu() {
     cargarDiccionario();
