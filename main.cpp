@@ -9,5 +9,7 @@ int main() {
     int opcion;
 
     do {
-        system("cls");             
+        system("cls");
+  cout << "===== MENU PRINCIPAL =====\n";
+        cout << "1. Fase 1\n";
 
