@@ -127,3 +127,13 @@ string procesarCodigo(string codigo) {
 
     return salida;
 }
+int main() {
+    cargarDiccionario("diccionario.dat");
+
+    cout << "Ingrese el codigo en C++ (finalice con una linea vacia):" << endl;
+
+    string codigo = "", linea;
+    while (getline(cin, linea)) {
+        if (linea.empty()) break;
+        codigo += linea + "\n";
+    }
