@@ -10,16 +10,24 @@ int main() {
 
     do {
         system("cls");
-  cout << "===== MENU PRINCIPAL =====\n";
+        cout << "===== MENU PRINCIPAL =====\n";
         cout << "1. Fase 1\n";
-
-cout << "2. Fase 2\n";
+        cout << "2. Fase 2\n";
         cout << "0. Salir\n";
         cout << "Seleccione una opcion: ";
         cin >> opcion;
-switch(opcion) {
+
+        switch(opcion) {
             case 1: menuFase1(); break;
             case 2: menuFase2(); break;
+            case 0: cout << "Saliendo...\n"; break;
+            default: cout << "Opcion invalida.\n"; system("pause"); break;
+        }
+
+    } while(opcion != 0);
+
+    return 0;
+}
 
 
 void menuFase1() {
@@ -48,15 +56,4 @@ void menuFase2() {
         }
 
     } while(op != 0);
-}
-        switch(opcion) {
-            case 1: menuFase1(); break;
-            case 2: menuFase2(); break;
-            case 0: cout << "Saliendo...\n"; break;
-            default: cout << "Opcion invalida.\n"; system("pause"); break;
-        }
-
-    } while(opcion != 0);
-
-    return 0;
 }
