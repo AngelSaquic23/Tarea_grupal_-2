@@ -27,3 +27,7 @@ void menuFase1() {
     do {
  switch(op) {
             case 1: system("start FASE1.exe"); break;
+ }
+
+    } while(op != 0);
+}
