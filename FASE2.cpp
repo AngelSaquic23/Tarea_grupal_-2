@@ -91,3 +91,39 @@ string procesarCodigo(string codigo) {
     stringstream entrada(codigo);
     string linea, salida = "";
     string estructura = "";
+
+    while (getline(entrada, linea)) {
+        string lineaRecortada = linea;
+        while (!lineaRecortada.empty() && (lineaRecortada[0] == ' ' || lineaRecortada[0] == '\t')) {
+            lineaRecortada = lineaRecortada.substr(1);
+        }
+
+        if (lineaRecortada.find("if") == 0 || lineaRecortada.find("else") == 0 ||
+            lineaRecortada.find("while") == 0 || lineaRecortada.find("for") == 0 ||
+            lineaRecortada.find("switch") == 0 || lineaRecortada.find("try") == 0 ||
+            lineaRecortada.find("catch") == 0) {
+            estructura = traducirLinea(lineaRecortada);
+            salida += traducirLinea(linea) + "\n";
+        }
+        else if (lineaRecortada.find("{") != string::npos) {
+            if (!estructura.empty()) {
+                salida += "inicio " + estructura + "\n";
+            } else {
+                salida += "{\n";
+            }
+        }
+        else if (lineaRecortada.find("}") != string::npos) {
+            if (!estructura.empty()) {
+                salida += "fin " + estructura + "\n";
+                estructura = "";
+            } else {
+                salida += "}\n";
+            }
+        }
+        else {
+            salida += traducirLinea(linea) + "\n";
+        }
+    }
+
+    return salida;
+}
