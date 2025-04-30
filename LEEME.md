@@ -1,4 +1,5 @@
-Clonar el Repositorio y/o abrir el main.exe o ejecutar el .cpp
+1.Clonar el Repositorio
+2.Abrir el main.cpp y/o ejecutar el main.exe
 --------------------------------------------------------------
 programas hechos por:
 Nombre Completo                               Carné
