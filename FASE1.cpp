@@ -56,3 +56,26 @@ void cargarDiccionario() {
     }
     archivo.close();
 }
+/ Crear palabra
+void crearPalabra() {
+    string palabra, traduccion, funcionalidad;
+    cout << "Ingrese Palabra: ";
+    getline(cin, palabra);
+
+    if (diccionario.find(palabra) != diccionario.end()) {
+        cout << "La palabra ya existe.\n";
+        return;
+    }
+
+    cout << "Ingrese Traduccion: ";
+    getline(cin, traduccion);
+    cout << "Ingrese Funcionalidad: ";
+    getline(cin, funcionalidad);
+
+    Palabra p;
+    p.traduccion = traduccion;
+    p.funcionalidad = funcionalidad;
+    diccionario[palabra] = p;
+    guardarDiccionario();
+    cout << "Palabra agregada exitosamente.\n";
+}
