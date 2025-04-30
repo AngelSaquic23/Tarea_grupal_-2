@@ -56,7 +56,19 @@ void cargarDiccionario() {
     }
     archivo.close();
 }
-/ Crear palabra
+
+// Funcion para guardar el diccionario en archivo
+void guardarDiccionario() {
+    ofstream archivo(archivoNombre.c_str());
+    for (map<string, Palabra>::iterator it = diccionario.begin(); it != diccionario.end(); ++it) {
+        archivo << it->first << endl;
+        archivo << it->second.traduccion << endl;
+        archivo << it->second.funcionalidad << endl;
+    }
+    archivo.close();
+}
+
+// Crear palabra
 void crearPalabra() {
     string palabra, traduccion, funcionalidad;
     cout << "Ingrese Palabra: ";
