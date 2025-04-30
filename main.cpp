@@ -10,4 +10,6 @@ int main() {
 
     do {
         system("cls");             
-
+system("cls");
+    	cout << "1. Iniciar Programa\n";
+    	cout << "0. Regresar\n";
