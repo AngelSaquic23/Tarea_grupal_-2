@@ -44,19 +44,6 @@ string traducirPalabra(const string& palabraOriginal, string& funcionalidadUsada
         return palabra + simbolo;
     }
 }
-    if (!palabra.empty() && ispunct(palabra[palabra.length() - 1]) && palabra[palabra.length() - 1] != '_') {
-        simbolo = palabra[palabra.length() - 1];
-        palabra = palabra.substr(0, palabra.length() - 1);
-    }
-
-    if (diccionario.find(palabra) != diccionario.end()) {
-        funcionalidadUsada = diccionario[palabra].second;
-        return diccionario[palabra].first + simbolo;
-    } else {
-        funcionalidadUsada = "";
-        return palabra + simbolo;
-    }
-}
 
 // Traducir una linea de codigo
 string traducirLinea(string linea) {
@@ -126,4 +113,21 @@ string procesarCodigo(string codigo) {
     }
 
     return salida;
+}
+
+int main() {
+    cargarDiccionario("diccionario.dat");
+
+    cout << "Ingrese el codigo en C++ (finalice con una linea vacia):" << endl;
+
+    string codigo = "", linea;
+    while (getline(cin, linea)) {
+        if (linea.empty()) break;
+        codigo += linea + "\n";
+    }
+
+    cout << "\n--- Codigo Traducido ---\n";
+    cout << procesarCodigo(codigo);
+
+    return 0;
 }
