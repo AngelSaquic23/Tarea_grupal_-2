@@ -1,0 +1,183 @@
+asm
+ensamblador
+permite insertar codigo ensamblador
+auto
+automatico
+deduce automaticamente el tipo de una variable
+bool
+booleano
+tipo de dato logico verdadero o falso
+break
+romper
+sale de un bucle o estructura switch
+case
+caso
+define una opcion en una estructura switch
+catch
+capturar
+bloque que maneja una excepcion
+char
+caracter
+tipo de dato para un solo simbolo
+class
+clase
+define una clase en programacion orientada a objetos
+const
+constante
+define un valor que no puede ser modificado
+const_cast
+conversion_constante
+convierte el tipo de una constante
+continue
+continuar
+salta a la siguiente iteracion del bucle
+default
+defecto
+caso por defecto en una estructura switch
+delete
+eliminar
+libera memoria asignada con new
+do
+hacer
+inicio de un bucle hacer-mientras
+double
+doble
+tipo de dato decimal de doble precision
+dynamic_cast
+conversion_dinamica
+convierte tipos en tiempo de ejecucion
+else
+entonces
+bloque alternativo si la condicion no se cumple
+enum
+enumeracion
+define un conjunto de constantes numericas
+explicit
+explicito
+evita conversiones implicitas de constructores
+extern
+externo
+declara variables definidas en otro archivo
+false
+falso
+valor logico falso
+float
+flotante
+tipo de dato decimal de precision simple
+for
+para
+bucle con inicializacion, condicion y actualizacion
+friend
+amigo
+permite el acceso privado entre clases
+goto
+ir_a
+salta a una etiqueta especifica
+if
+si
+estructura de control condicional
+inline
+en_linea
+solicita que una funcion sea insertada directamente
+int
+entero
+tipo de dato numerico entero
+long
+largo
+tipo de dato entero de mayor capacidad
+mutable
+mutable
+permite modificar miembros constantes
+namespace
+espacio_nombres
+agrupa identificadores bajo un nombre comun
+new
+nuevo
+reserva memoria dinamicamente
+operator
+operador
+permite sobrecargar operadores
+private
+privado
+miembros accesibles solo dentro de la clase
+protected
+protegido
+miembros accesibles desde la clase y sus derivadas
+public
+publico
+miembros accesibles desde cualquier parte
+register
+registro
+sugiere almacenamiento en registro (obsoleto)
+reinterpret_cast
+conversion_reinterpretada
+convierte sin verificar compatibilidad
+return
+retorno
+devuelve un valor desde una funcion
+short
+corto
+tipo de dato entero de menor capacidad
+signed
+con_signo
+tipo de dato numerico que permite negativos
+sizeof
+tamano
+devuelve el tamano en bytes de un tipo o variable
+static
+estatico
+mantiene valor entre llamadas o limita visibilidad
+static_cast
+conversion_estatica
+convierte tipos de forma segura en compilacion
+struct
+estructura
+define una estructura de datos
+switch
+seleccion
+estructura de seleccion multiple
+template
+plantilla
+permite crear codigo generico
+this
+este
+puntero al objeto actual
+throw
+lanzar
+lanza una excepcion
+true
+verdadero
+valor logico verdadero
+try
+intentar
+bloque que puede generar excepciones
+typedef
+definir_tipo
+define un alias para un tipo de dato
+typeid
+tipo_id
+obtiene informacion del tipo en tiempo de ejecucion
+typename
+nombre_tipo
+declara un nombre como tipo
+union
+union
+estructura que comparte memoria entre miembros
+unsigned
+sin_signo
+tipo de dato numerico solo positivo
+using
+usando
+permite el uso de un espacio de nombres
+virtual
+virtual
+permite polimorfismo en clases
+void
+vacio
+indica ausencia de tipo o retorno
+volatile
+volatil
+evita optimizacion sobre una variable
+while
+mientras
+bucle que se ejecuta mientras se cumpla la condicion
