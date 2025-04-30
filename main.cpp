@@ -17,6 +17,10 @@ cout << "2. Fase 2\n";
         cout << "0. Salir\n";
         cout << "Seleccione una opcion: ";
         cin >> opcion;
+switch(opcion) {
+            case 1: menuFase1(); break;
+            case 2: menuFase2(); break;
+
 
 void menuFase1() {
     int op;
