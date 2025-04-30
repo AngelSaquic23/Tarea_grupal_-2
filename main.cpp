@@ -16,3 +16,5 @@ int main() {
 void menuFase1() {
     int op;
     do {
+ switch(op) {
+            case 1: system("start FASE1.exe"); break;
