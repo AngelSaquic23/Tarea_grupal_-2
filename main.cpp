@@ -16,3 +16,5 @@ int main() {
 void menuFase1() {
     int op;
     do {
+case 0: break;
+            default: cout << "Opcion invalida.\n"; system("pause"); break;
